@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>星际战机：虚空之战</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+    <div id="ui-overlay">
+      <div id="hud-top">
+        <span id="score-display">得分: 0</span>
+        <span id="time-display">时间: 00:00</span>
+        <span id="coin-display">金币: 0</span>
+        <span id="level-display"></span>
+      </div>
+      <div id="combo-display"></div>
+      <div id="hud-bottom">
+        <div id="health-bar">
+          <span class="label">生命</span>
+          <div class="bar"><div class="fill health"></div></div>
+          <span class="value">100/100</span>
+        </div>
+        <div id="shield-bar">
+          <span class="label">护盾</span>
+          <div class="bar"><div class="fill shield"></div></div>
+          <span class="value">0/100</span>
+        </div>
+        <div id="weapon-display">
+          <span class="label">武器</span>
+          <span class="value">激光 Lv.1</span>
+        </div>
+        <div id="wingman-display">
+          <span class="label">僚机</span>
+          <span class="value">无</span>
+        </div>
+        <div id="bomb-display">
+          <span class="label">炸弹</span>
+          <span class="value">3 [Q]</span>
+        </div>
+      </div>
+      <div id="menu-screen">
+        <h1>星际战机</h1>
+        <h2>虚空之战</h2>
+        <p class="mode-title">选择模式</p>
+        <div class="mode-buttons">
+          <button class="mode-btn" data-mode="classic">经典模式</button>
+          <button class="mode-btn" data-mode="endless">无尽模式</button>
+          <button class="mode-btn" data-mode="bossRush">Boss 突击</button>
+        </div>
+        <button id="start-btn" class="hidden">开始游戏</button>
+        <button id="warehouse-btn">仓库/商店</button>
+        <button id="high-score-btn">排行榜</button>
+      </div>
+      <div id="pause-screen">
+        <h1>游戏暂停</h1>
+        <button id="resume-btn">继续游戏</button>
+        <button id="quit-btn">退出游戏</button>
+      </div>
+      <div id="game-over-screen">
+        <h1>游戏结束</h1>
+        <p id="final-score">最终得分: 0</p>
+        <button id="restart-btn">重新开始</button>
+        <button id="main-menu-btn">返回主菜单</button>
+      </div>
+      <div id="boss-warning">
+        <span>BOSS 即将来袭!</span>
+      </div>
+      <div id="high-score-screen">
+        <h1>排行榜</h1>
+        <div id="score-list"></div>
+        <button id="close-score-btn">关闭</button>
+      </div>
+      <div id="warehouse-screen">
+        <h1>仓库/商店</h1>
+        <div id="warehouse-coins">金币: 0</div>
+        <div class="warehouse-tabs">
+          <button class="tab-btn active" data-tab="weapons">武器</button>
+          <button class="tab-btn" data-tab="skins">皮肤</button>
+        </div>
+        <div id="weapons-tab" class="tab-content active">
+          <div id="weapons-list"></div>
+        </div>
+        <div id="skins-tab" class="tab-content">
+          <div id="skins-list"></div>
+        </div>
+        <button id="close-warehouse-btn">关闭</button>
+      </div>
+    </div>
+  </div>
+  <script src="js/game.min.js"></script>
+</body>
+</html>
